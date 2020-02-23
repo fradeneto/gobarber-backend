@@ -1,6 +1,9 @@
 import { Router } from 'express';
+import CadastroController from './controllers/CadastroController';
 
 const routes = Router();
+
+routes.post('/cadastro', CadastroController.store);
 
 routes.get('/', (req, res) => {
   let date_ob = new Date();
